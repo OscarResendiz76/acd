@@ -1,0 +1,35 @@
+{%extends "base.html"%}
+{%block principal%}
+    <h1>Registro</h1>
+
+    
+{%if form%}
+<h2>Agregar</h2>
+    <form action="" method="POST">
+        {%csrf_token %}
+
+        {{form.as_p}}
+        <button>Enviar</button>
+    </form>
+{%else%}
+<h2>Lista de registros</h2>
+
+<ul class=tablas>
+    {%for a in listaregistro%}
+        <li>
+            <p>
+                {{a.nombre}}
+                <p>
+                    {{a.apellidos}}
+                </p>
+                {{a.correo}}
+            </p>
+            <p>
+                {{a.sexo}}
+            </p>
+        </li>
+    {%endfor%}
+</ul>
+<a href="registro/add">Nuevo usuario</a>
+{%endif%}
+{%endblock%}

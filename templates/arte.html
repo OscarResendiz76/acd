@@ -1,0 +1,30 @@
+{%extends "base.html"%}
+{%block principal%}
+<h1>Arte y cultutra</h1>
+
+{%if form%}
+<h2>Agregar</h2>
+<form action="" method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button>Guardar</button>
+
+</form>
+{%else%}
+    <h2>Lista de actividades</h2>
+
+
+<ul class="tablas">
+    {%for a in actividadesarte%}
+        <li>
+            <p>
+                <em>{{a.nombre}}</em>
+                {{a.descripcion}}
+            </p>
+        </li>
+    {%endfor%}
+</ul>
+<a href="arte/add" class="arte">Nueva actividad</a>
+
+{%endif%}
+{%endblock%}

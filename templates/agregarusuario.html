@@ -1,0 +1,10 @@
+{%extends "base.html"%}
+
+{%block principal%}
+<form action="" method="POST">
+{%csrf_token%}
+{{formulario.as_p}}
+<button>Ingresar</button>
+</form>
+
+{%endblock%}
