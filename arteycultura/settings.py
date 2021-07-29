@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)oaof$ym9-d3iqws002d@r$!1du05nk!f5))^+a$qvnci(w%0g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".herokuapp.com"]
 
 
 # Application definition
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whirenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'arteycultura.urls'
@@ -143,4 +144,4 @@ EMAIL_HOST_USER="oscarito.resendiz@gmail.com"
 EMAIL_HOST_PASSWORD="zozucozudwcjvvnl"
 EMAIL_USE_TLS=True
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
