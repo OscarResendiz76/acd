@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'arteyculturaoscar.wsgi.application'
+WSGI_APPLICATION = 'arteycultura.wsgi.application'
 
 
 # Database
