@@ -145,3 +145,8 @@ EMAIL_HOST_PASSWORD="zozucozudwcjvvnl"
 EMAIL_USE_TLS=True
 
 
+
+STATIC_ROOT = BASE_DIR / 'static'
+ 
+
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
